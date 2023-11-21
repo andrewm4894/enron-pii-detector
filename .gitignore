@@ -161,4 +161,9 @@ cython_debug/
 
 kaggle.json
 
-/data/
+/data/enron-email-dataset.zip
+/data/emails.csv
+/data/emails_train.csv
+/data/emails_train_sample.csv
+/data/emails_test.csv
+/data/emails_holdout.csv
