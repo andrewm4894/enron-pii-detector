@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import random
 import json
+from src.utils import clean_file_id, clean_message
 
 # Set the page to wide mode
 st.set_page_config(layout="wide")
@@ -11,15 +12,13 @@ def load_data(file_path):
     return pd.read_csv(file_path)
 
 # Load the DataFrame from the specified path
-df = load_data("./data/emails_train_sample.csv")
+df = load_data("./data/emails_train_small.csv")
 
 # Function to load a random row from the DataFrame
 def load_random_row():
     row = df.sample(1).iloc[0]
-    row["file_clean"] = (
-        row["file"].replace("/", "_").replace("-", "_").replace(".", "_")
-    )
-    row["message"] = "\n".join(row["message"].split("\n")[16:])
+    row["file_clean"] = clean_file_id(row["file"])
+    row["message"] = clean_message(row["message"])
     return row
 
 # Initialize session state for email data
