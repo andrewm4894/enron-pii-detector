@@ -1,3 +1,10 @@
+"""
+Streamlit app for labeling PII data in emails.
+
+Usage:
+    streamlit run labeling_app.py
+"""
+
 import streamlit as st
 import pandas as pd
 import random
