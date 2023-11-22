@@ -30,8 +30,7 @@ def filter_labeled_files(files, labels_folder):
     return [f for f in files if f not in labeled_files]
 
 
-def extract_file_id(filename, path, tag):
-    # read json file and extract file_id
+def extract_file_id(filename, path):
     with open(f"{path}{filename}", "r") as f:
         data = json.load(f)
     return data["file_id"]
