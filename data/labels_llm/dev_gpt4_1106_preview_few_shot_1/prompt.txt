@@ -1,0 +1,308 @@
+
+perform PII entity extraction from the below email message(s) using the provided `extract_pii_entities` function.
+
+do not make up any entities or parts of entities that are not present in the message(s).
+
+here are some example messages followed by the entities that should be extracted from them.
+
+lastly there is a message that you should extract entities from.
+
+
+## MESSAGE:
+
+There is a disagreement over where US Drift should be shown on the DPR.  
+After discussions with all of you, it is apparent that Mark Frevert must make 
+the decision about whether to move US Drift from the Enron Global Markets 
+section where it currently resides to the Enron Americas section.
+
+As I understand it Mark is currently traveling and out of reach.  Once I know 
+his decision, any necessary changes will be made.
+
+Thanks for your cooperation.
+
+Best regards
+
+Shona
+X39123
+
+## ENTITIES:
+
+```json
+{"names": ["Mark Frevert"], "phone_numbers": ["X39123"], "email_addresses": [""], "physical_addresses": [""]}
+```
+
+## MESSAGE:
+
+---------------------- Forwarded by Vince J Kaminski/HOU/ECT on 03/09/2001 
+03:12 PM ---------------------------
+   
+	
+	
+	From:  Jason Sokolov                           03/09/2001 08:49 AM
+	
+
+To: Vince J Kaminski/HOU/ECT@ECT
+cc:  
+Subject: Additional e-mail addresses
+
+Vince,
+
+three new students gave me their e-mails:
+
+wooddy@rice.edu, lamas@rice.edu, tbalestrery@houston.rr.com
+
+Jason
+
+## ENTITIES:
+
+```json
+{"names": ["Vince J Kaminski", "Jason Sokolov"], "phone_numbers": [""], "email_addresses": ["wooddy@rice.edu", "tbalestrery@houston.rr.com", "lamas@rice.edu"], "physical_addresses": [""]}
+```
+
+## MESSAGE:
+
+The Resolution Center will be decommissioning one of its 888 numbers (888-877-7757) as of January 7, 2002.
+You can continue to contact the Resolution Center, Toll Free, by using the following steps: 
+To contact the ENW IT Resolution Center:
+? Call 1-800-973-6766 (1-800-97-ENRON)
+? Select 1 to transfer to an extension within the Enron Building
+? Select 31411 and you will be transferred to the helpdesk.
+The following options are also available through the toll-free number:
+0: Connect to voice directory
+1: Transfer to an extension in the Enron building
+2: Access voicemail in the Enron building
+3: Transfer to 3 Allen Center
+4: Transfer to Omaha
+5: Transfer modem or fax with 646 prefix
+6: Speak to an Enron operator
+7: Transfer to a fax machine in the message center
+8: Transfer to Aviation
+9: Leave a confidential message for Enron Chairman
+Please contact the Resolution Center at 3-1411 for assistance
+    
+ETS customers should continue to contact the ETS Solution Center-Houston at 713-345-4745 or 888-465-4745, and the ETS Solution Center-Omaha at 402-398-7454.
+
+## ENTITIES:
+
+```json
+{"names": [""], "phone_numbers": ["1-800-97-ENRON", "888-877-7757", "402-398-7454", "888-465-4745", "713-345-4745", "1-800-973-6766"], "email_addresses": [""], "physical_addresses": [""]}
+```
+
+## MESSAGE:
+
+FYI
+
+Sara Shackleton
+Enron North America Corp.
+1400 Smith Street, EB 3801a
+Houston, Texas  77002
+713-853-5620 (phone)
+713-646-3490 (fax)
+sara.shackleton@enron.com
+----- Forwarded by Sara Shackleton/HOU/ECT on 05/21/2001 03:27 PM -----
+
+	Stephanie Panus@ENRON
+	05/21/2001 11:54 AM
+		
+		 To: Cheryl Nelson/NA/Enron@Enron
+		 cc: Keegan Farrell/NA/Enron@Enron, Sara Shackleton/HOU/ECT@ECT
+		 Subject: Re: Enron Corp./Enron Credit Inc. ("ECI") guaranty amendment 
+(increase from USD25 Million to USD100 Million) in favor of Bear, Stearns, et 
+al
+
+You may want to clarify this with Keegan as 1) your voice mail was full on 
+that Friday, 2) Keegan tried to contact you in New York and the number she 
+had for you was disconnected, and 3) we tried to locate the documents that 
+Friday and were not able to.
+
+
+
+	Cheryl Nelson
+	Sent by: Cheryl Nelson
+	05/21/2001 11:00 AM
+		
+		 To: Sara Shackleton/HOU/ECT@ECT, Stephanie Panus/NA/Enron@Enron, Tom 
+Doukas/Enron@EnronXGate
+		 cc: Keegan Farrell/NA/Enron@Enron
+		 Subject: Re: Enron Corp./Enron Credit Inc. ("ECI") guaranty amendment 
+(increase from USD25 Million to USD100 Million) in favor of Bear, Stearns, et 
+al
+
+Sara, 
+
+Moreover, Keegan represented to me that you requested that she locate for you 
+the Securities Loan Agreement for you while I was out and that she went into 
+my office and retrieved that document from my Enron Credit Inc. file and gave 
+it to you.  So, I am not sure of the source of confusion about not being able 
+to find my file but for future reference, the best thing to do is to ask 
+Keegan how to contact me immediately and directly - when out the office she 
+always knows how to reach me.
+
+Cheryl Nelson
+Senior Counsel
+EB3816
+(713) 345-4693
+http://gss.enron.com/
+
+
+
+	Cheryl Nelson
+	Sent by: Cheryl Nelson
+	05/21/2001 10:36 AM
+		
+		 To: Sara Shackleton/HOU/ECT@ECT
+		 cc: Stephanie Panus/NA/Enron@Enron, Tom Doukas/Enron@EnronXGate
+		 Subject: Re: Enron Corp./Enron Credit Inc. ("ECI") guaranty amendment 
+(increase from USD25 Million to USD100 Million) in favor of Bear, Stearns, et 
+al
+
+Sara: 
+
+I will forward the documents to you.  
+
+For future reference, if anyone is looking for a file for an urgent matter 
+while I am out, she should convey that fact to me by either (1) leaving a 
+voice mail - as I checked my voicemails on Friday (that is how I was able to 
+speak with Tom from New York on Friday) or (2) advise Keegan and she will 
+contact me immediately by cell phone as she did regarding other matters on 
+Friday.
+
+Cheryl Nelson
+Senior Counsel
+EB3816
+(713) 345-4693
+http://gss.enron.com/
+
+
+
+	Sara Shackleton@ECT
+	05/15/2001 03:45 PM
+		 
+		 To: Cheryl Nelson/NA/Enron@Enron
+		 cc: Tom Doukas/Enron@EnronXGate, Stephanie Panus/NA/Enron@Enron
+		 Subject: Enron Corp./Enron Credit Inc. ("ECI") guaranty amendment (increase 
+from USD25 Million to USD100 Million) in favor of Bear, Stearns, et al
+
+Cheryl:
+
+I spoke with Clem and he is preparing the amendment for immediate execution 
+as the signers will be at an offsite tomorrow.  I'll let Tom know as soon as 
+the amendment has been executed.  Anna Meytina is on vacation so I left a 
+message with Sharon Chernick.
+
+In order to complete our files with respect to the Enron North America Inc. 
+("ENA") Securities Loan Agreement, please provide me with copies of the 
+following documents:
+
+(1)  assignment of the Securities Loan Agreement from ENA to ECI (or was a 
+separate agreement with ECI executed?)
+
+(2) termination of the prior Enron Corp. guaranty on behalf of ENA in the 
+amount of  USD25 Million 
+
+I spoke with Stephanie and she could not locate your Bear/ECI files on Friday 
+of last week.  
+
+Thanks.
+
+Sara Shackleton
+Enron North America Corp.
+1400 Smith Street, EB 3801a
+Houston, Texas  77002
+713-853-5620 (phone)
+713-646-3490 (fax)
+sara.shackleton@enron.com
+
+## ENTITIES:
+
+```json
+{"names": ["Sara Shackleton", "Keegan Farrell", "Sharon Chernick", "Cheryl Nelson", "Anna Meytina", "Tom Doukas", "Stephanie Panus"], "phone_numbers": ["713-646-3490", "713-853-5620", "(713) 345-4693"], "email_addresses": ["sara.shackleton@enron.com"], "physical_addresses": ["Enron North America Corp., 1400 Smith Street, EB 3801a, Houston, Texas  77002"]}
+```
+
+## MESSAGE:
+
+All,
+
+Atached is our report on the past few days of the hearing.
+
+Kimberly A. Curry
+Bracewell & Patterson, L.L.P
+2000 K Street, N.W.
+Suite 500
+(202) 828-7623 (phone)
+(202) 857-2107 (fax)
+kcurry@bracepatt.com
+
+ - #143647 v1 - DAYS 15 -17.doc
+
+## ENTITIES:
+
+```json
+{"names": ["Kimberly A. Curry"], "phone_numbers": ["(202) 828-7623", "(202) 857-2107"], "email_addresses": ["kcurry@bracepatt.com"], "physical_addresses": ["Bracewell & Patterson, L.L.P, 2000 K Street, N.W., Suite 500"]}
+```
+
+## MESSAGE:
+
+Carol St. Clair
+EB 3892
+713-853-3989 (Phone)
+713-646-3393 (Fax)
+carol.st.clair@enron.com
+----- Forwarded by Carol St Clair/HOU/ECT on 08/29/00 08:08 AM -----
+
+	"Cheri Strouse" <STROC@andrews-kurth.com>
+	08/25/00 05:39 PM
+		 
+		 To: <alan.quaintance@enron.com>, <Brenda.L.Funk@enron.com>, 
+<carol.st.clair@enron.com>, <charles.delacey@enron.com>, 
+<Clement.abrams@enron.com>, <David.roland@enron.com>, 
+<gina.karathanos@enron.com>, <Joel.ephross@enron.com>, 
+<tina.livingston@enron.com>, <Trevor.randolph@enron.com>, 
+<trushar.patel@enron.com>, <mniebruegge@mayerbrown.com>, 
+<tellwood@mayerbrown.com>, <eawilburn@prickett.com>, <Tamullen@prickett.com>, 
+<kenton@rlf.com>, <mark.wolf@us.cibc.com>, <mercedes.arango@us.cibc.com>, 
+<schottla@us.cibc.com>, <Aroberts@wilmingtontrust.com>
+		 cc: "David Barbour" <BARBD@andrews-kurth.com>, "MURIEL McFARLING" 
+<MCFAM@andrews-kurth.com>, "SCOTT OLSON" <OLSOS@andrews-kurth.com>
+		 Subject: Re:Project Tahiti
+
+
+Attached please find the Sale and Auction Agreement for the Fiji Z Class B 
+Interest and the Bali Trust Agreement.
+
+The Sale and Auction Agreement is marked against the Sale and Auction 
+Agreement from the Hawaii 125-0, McGarrett Series B transaction and the Bali 
+Trust Agreement is marked against the Alchemy Trust Agreement.
+
+Please note that the attached documents are in Word Perfect.  A subsequent 
+email with the documents in Microsoft Word will follow.
+
+Please fax comments to David Barbour and Muriel McFarling at 214-659-4401 by 
+Monday, August 28th.
+
+If you have any questions, please contact David Barbour at 214-659-4444.
+
+B. Scott Olson
+Andrews & Kurth L.L.P.
+1717 Main Street
+Suite 3700
+Dallas, Texas 75201
+Direct: 214.659.4443
+Fax: 214.659.4832
+
+ - 255084 COMPARISON AGAINST MCGARRETT SERIES B.wpd
+ - 255146 COMPARISON 220406 VER 7.WPD
+
+## ENTITIES:
+
+```json
+{"names": ["Cheri Strouse", "Carol St. Clair", "SCOTT OLSON", "B. Scott Olson", "David Barbour", "MURIEL McFARLING"], "phone_numbers": ["214-659-4444", "713-646-3393", "214.659.4832", "214.659.4443", "713-853-3989", "214-659-4401"], "email_addresses": ["barbd@andrews-kurth.com", "alan.quaintance@enron.com", "gina.karathanos@enron.com", "tamullen@prickett.com", "kenton@rlf.com", "clement.abrams@enron.com", "tellwood@mayerbrown.com", "mcfam@andrews-kurth.com", "david.roland@enron.com", "brenda.l.funk@enron.com", "carol.st.clair@enron.com", "trevor.randolph@enron.com", "olsos@andrews-kurth.com", "mark.wolf@us.cibc.com", "stroc@andrews-kurth.com", "trushar.patel@enron.com", "tina.livingston@enron.com", "joel.ephross@enron.com", "aroberts@wilmingtontrust.com", "schottla@us.cibc.com", "charles.delacey@enron.com", "mniebruegge@mayerbrown.com", "eawilburn@prickett.com", "mercedes.arango@us.cibc.com"], "physical_addresses": ["Andrews & Kurth L.L.P., 1717 Main Street, Suite 3700, Dallas, Texas 75201"]}
+```
+
+## MESSAGE:
+```
+<text>
+```
+
+## ENTITIES:
+

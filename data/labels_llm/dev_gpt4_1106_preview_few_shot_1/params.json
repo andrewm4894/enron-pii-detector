@@ -1,0 +1,1 @@
+{"tag": "dev_gpt4_1106_preview_few_shot_1", "openai_model": "gpt-4-1106-preview", "data_path": "./data/emails_train_small.csv", "few_shot": true, "output_dir": "./data/labels_llm/dev_gpt4_1106_preview_few_shot_1", "nrows": null}

@@ -23,6 +23,7 @@ def load_data(file_path):
 
 
 df = load_data("./data/emails_train_small.csv")
+# df = load_data("./data/emails_holdout_small.csv")
 
 
 def filter_labeled_files(files, labels_folder):
