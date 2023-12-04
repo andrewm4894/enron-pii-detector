@@ -22,8 +22,9 @@ def load_data(file_path):
     return df
 
 
-df = load_data("./data/emails_train_small.csv")
-# df = load_data("./data/emails_holdout_small.csv")
+data_path = "./data/emails_test_small.csv"
+data_file = data_path.split("/")[-1].split(".")[0]
+df = load_data(data_path)
 
 
 def filter_labeled_files(files, labels_folder):
@@ -104,7 +105,7 @@ if st.button("Save Data"):
     for key in ["email_addresses"]:
         pii_data[key] = [x.lower() for x in pii_data[key]]
 
-    output_path = f"./data/labels/{st.session_state.file_id_clean}.json"
+    output_path = f"./data/labels/{data_file}/{st.session_state.file_id_clean}.json"
     with open(output_path, "w") as f:
         json.dump(pii_data, f)
 
